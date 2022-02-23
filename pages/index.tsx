@@ -3,21 +3,28 @@ import { Layout } from "components/layout/layout";
 import { BannerComponent } from "components/data/banner";
 import { ServicesComponent } from "components/sections/home/servicos";
 import { PortfolioComponent } from "components/data/portfolio";
-
+import { CarouselClientes } from "components/sections/home/clientsCarousel";
 
 export const PortfolioList = [
   {
     url: "ecofood",
-    categoryUrl: 'site',
+    categoryUrl: "site",
     title: "ECOFOOD",
     status: "NO AR",
     category: "/ux ui_",
     type: "/programação_",
-    color: '#ffc300',
-    imagem: '/images/ecofood/principal-ecofood.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis cras sed felis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis cras sed felis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis cras sed felis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et',
-    gallery: ["/images/ecofood/image1.jpg", "/images/ecofood/image2.jpg", "/images/ecofood/image3.png", "/images/ecofood/image4.jpg"],
-  },,
+    color: "#ffc300",
+    imagem: "/images/ecofood/principal-ecofood.png",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis cras sed felis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis cras sed felis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis cras sed felis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    gallery: [
+      "/images/ecofood/image1.jpg",
+      "/images/ecofood/image2.jpg",
+      "/images/ecofood/image3.png",
+      "/images/ecofood/image4.jpg",
+    ],
+  },
+  ,
   {
     url: "codigo-da-carne",
     categoryUrl: "martketing",
@@ -26,11 +33,11 @@ export const PortfolioList = [
     category: "/ux ui_ ",
     type: "/programação_",
     color: "#200d0d",
-    imagem: '/images/codigocarne/principal-codigo.png',
-    description: 'descricao da codigo da carne',
+    imagem: "/images/codigocarne/principal-codigo.png",
+    description: "descricao da codigo da carne",
     gallery: ["/images/codigocarne/principal-codigo.png"],
   },
-]
+];
 
 export default function HomePage() {
   const CarouselBanner = [
@@ -70,6 +77,65 @@ export default function HomePage() {
     },
   ];
 
+  const ListaClientes = [
+    [
+      {
+        image: "/images/logoclientes/logo1.png",
+        link: " ",
+      },
+      {
+        image: "/images/logoclientes/logo2.png",
+        link: " ",
+      },
+
+      {
+        image: "/images/logoclientes/logo3.png",
+        link: " ",
+      },
+
+      {
+        image: "/images/logoclientes/logo4.png",
+        link: " ",
+      },
+    ],
+    [
+      {
+        image: "/images/logoclientes/logo1.png",
+        link: " ",
+      },
+      {
+        image: "/images/logoclientes/logo2.png",
+        link: " ",
+      },
+
+      {
+        image: "/images/logoclientes/logo3.png",
+        link: " ",
+      },
+
+      {
+        image: "/images/logoclientes/logo4.png",
+        link: " ",
+      },
+      {
+        image: "/images/logoclientes/logo4.png",
+        link: " ",
+      },
+      {
+        image: "/images/logoclientes/logo4.png",
+        link: " ",
+      },
+      {
+        image: "/images/logoclientes/logo4.png",
+        link: " ",
+      },
+         {
+        image: "/images/logoclientes/logo4.png",
+        link: " ",
+      },
+    ],
+  ];
+
   return (
     <Layout>
       <BannerComponent
@@ -81,9 +147,11 @@ export default function HomePage() {
         carouselImages={CarouselBanner}
       />
 
-      <ServicesComponent listServices={ServicesList}/>
+      <ServicesComponent listServices={ServicesList} />
 
-      <PortfolioComponent listPortfolio={PortfolioList}/>
+      <PortfolioComponent listPortfolio={PortfolioList} />
+
+      <CarouselClientes listImages={ListaClientes} />
     </Layout>
   );
 }
